@@ -1,0 +1,23 @@
+<div class="container">
+
+
+
+
+<table class="table table-striped">
+  <tr align="center">
+     <th>Bug Name</th>
+  </tr>
+<% obj.each do |b|%>
+
+  <tr align="center">
+     <td><%= link_to b.title, bug_path(b), :class => "btn btn-outline-info"%></td>
+  </tr>
+  <% end %> 
+</table>
+
+    
+    
+ 
+
+</div>
+

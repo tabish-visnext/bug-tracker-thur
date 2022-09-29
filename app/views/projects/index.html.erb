@@ -1,0 +1,32 @@
+<div class="container">
+
+
+
+
+<table class="table table-success table-striped">
+  <tr>
+     <th>Project Name</th>
+     <th>Description</th>
+     <th>Project Creator</th>
+     
+     <th>Project Bugs</th>
+  </tr>
+  
+  
+  <% @p.each do |p|%>
+
+  <tr>
+     <td><%= p.projectname%></td>
+     <td><%= truncate(p.description, length: 30)%></td>
+     <td><%= p.project_creator.username%></td>
+     
+   
+     
+     <td><%= link_to "Bugs", project_path(p), :class => "btn btn-outline-info"%></td>
+
+     
+  </tr>
+  <%end%>
+</table>
+
+</div>

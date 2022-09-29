@@ -1,0 +1,16 @@
+<h2 align="center"><%= @usr.username%>'s Projects</h2>
+<%= render 'projects/project', obj: @usr.projects%>
+
+<% if current_user.role == 'developer'%>
+  <h2 align="center"><%= @usr.username%>'s Assigned Bugs</h2>
+  <%= render 'bugs/bug', obj: @usr.assigned_bugs%>
+<%end%>
+
+<% if current_user.role == 'qa'%>
+   <h2 align="center"><%= @usr.username%>'s Created Bugs</h2>
+   <%= render 'bugs/bug', obj: @usr.created_bugs%>
+<%end%>
+
+
+
+

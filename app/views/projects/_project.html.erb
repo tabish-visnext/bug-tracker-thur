@@ -1,0 +1,24 @@
+<div class="container">
+
+
+
+
+<table class="table table-striped">
+<tr align="center">
+     <th>Project Name</th>
+    
+  </tr>
+<% obj.each do |p|%>
+
+  <tr align="center">
+     <td><%= link_to p.projectname, project_path(p), :class => "btn btn-outline-info"%></td>
+     
+  </tr>
+  <% end %>  
+</table>
+
+
+    
+
+</div>
+

@@ -1,0 +1,18 @@
+<div class="container">
+
+
+
+
+<table class="table table-striped">
+  <tr align="center">
+     <th>Bug Name</th>
+  </tr>
+<% @p.bugs.each do |p|%>
+
+  <tr align="center">
+     <td><%= p.title%></td>
+  </tr>
+  <% end %> 
+</table>
+
+

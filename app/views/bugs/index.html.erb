@@ -1,0 +1,36 @@
+<div class="container">
+
+
+
+
+<table class="table table-success table-striped">
+  <tr>
+     <th>Bug Title</th>
+     <th>Bug Status</th>
+     <th>Bug Type</th>
+     
+     <th>Bug Creator</th>
+     <th>Bug Assignee</th>
+  </tr>
+  
+  
+  <% @b.each do |b|%>
+
+  <tr>
+     <td><%= b.title%></td>
+     <td><%= b.status%></td>
+     <td><%= b.bug_type%></td>
+     <td><%= b.bug_creator.username%></td>
+     <td><%= b.bug_assignee.username%></td>
+     
+     
+   
+     
+     
+
+     
+  </tr>
+  <%end%>
+</table>
+
+</div>

@@ -1,0 +1,36 @@
+
+
+
+<div class="container">
+<%= bootstrap_form_for(@p, :html => {class: "form-horizontal", role: "form"}) do |f|%>
+    
+    <div class="form-group col-md-8">
+      <p>
+         <%= f.text_field :projectname%>
+      </p>
+
+      
+      <p>
+         <%= f.text_field :description%>
+      </p>
+
+      <p>
+         <%= f.text_field :creator_id, data: { numeric: true } %>
+      </p>
+
+      <p>
+      <%= f.text_field :assignee_id, data: { numeric: true } %>
+   </p>
+      
+     
+
+      <p>
+           <%= f.submit "Create Project", data: {turbo: false}%>
+       </p>
+
+       <%end%>
+
+       
+      
+       </div>
+</div>
